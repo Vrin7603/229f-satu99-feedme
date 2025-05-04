@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ground
+  - Uncollectible
+  - Collectible
+  - Bullet
   layers:
   - Default
   - TransparentFX
