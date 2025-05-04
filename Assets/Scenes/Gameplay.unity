@@ -146,8 +146,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 40661806}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8359249, y: -0.75439197, z: -0.96816504}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.8359375, y: -0.75439453, z: -0.96816504}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -201,7 +201,6 @@ MonoBehaviour:
   timeRemaining: 60
   timerText: {fileID: 2096968426}
   timerIsRunning: 1
-  gameOverPanel: {fileID: 0}
 --- !u!1 &43056182
 GameObject:
   m_ObjectHideFlags: 0
@@ -19143,6 +19142,6 @@ SceneRoots:
   - {fileID: 619394802}
   - {fileID: 675995835}
   - {fileID: 1911557191}
-  - {fileID: 40661807}
   - {fileID: 2107426485}
+  - {fileID: 40661807}
   - {fileID: 555503780}
