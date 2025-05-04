@@ -4,7 +4,7 @@ public class ItemHitByBullet : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Bullet"))
+        if (other.CompareTag("Bullet")) //destroy after hit bullet
         {
             if (CompareTag("Collectible"))
             {
@@ -20,9 +20,15 @@ public class ItemHitByBullet : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(gameObject);
         }
+
+        else if (other.CompareTag("Ground")) //destroy after hit ground
+        {
+            Destroy(gameObject);
+        }
     }
 
-   
+
+
 }
 
 

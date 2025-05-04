@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
         if (playerHP <= 0)
         {
             Debug.Log("Player is defeated!");
-            // Add game over logic here*************Add scene
+            // Add game over logic here*************Add scene******
         }
     }
 }
