@@ -2,21 +2,38 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float Speed; 
+    public float Speed;
     private float move;
 
-    Rigidbody rb2d;
+    private Rigidbody2D rb2d;
+    private bool facingRight = true;
 
     void Start()
     {
-        rb2d = GetComponent<Rigidbody>();
+        rb2d = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         move = Input.GetAxis("Horizontal");
+        rb2d.velocity = new Vector2(move * Speed, rb2d.velocity.y);
 
-        rb2d.linearVelocity = new Vector2(move * Speed, rb2d.linearVelocity.y);
+        // Flip the sprite
+        if (move > 0 && !facingRight)
+        {
+            Flip();
+        }
+        else if (move < 0 && facingRight)
+        {
+            Flip();
+        }
+    }
+
+    void Flip()
+    {
+        facingRight = !facingRight;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }
