@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
@@ -23,7 +24,7 @@ public class GameTimer : MonoBehaviour
                 timeRemaining = 0;
                 timerIsRunning = false;
 
-                // Optionally: call GameOver, stop spawner, etc.
+                LoadEndScene();
             }
         }
     }
@@ -35,6 +36,11 @@ public class GameTimer : MonoBehaviour
         int seconds = Mathf.FloorToInt(time % 60);
         timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
-   
+
+    void LoadEndScene()
+    {
+        SceneManager.LoadScene("EndScene"); // <-- Make sure EndScene is in Build Settings
+    }
+
 }
 

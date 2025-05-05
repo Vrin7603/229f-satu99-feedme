@@ -2,6 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement; 
 
 public class GameManager : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class GameManager : MonoBehaviour
         if (playerHP <= 0)
         {
             Debug.Log("Player is defeated!");
-            // Add game over logic here*************Add scene******
+            SceneManager.LoadScene("EndScene");
         }
     }
     void Update()
@@ -47,5 +48,7 @@ public class GameManager : MonoBehaviour
             hpText.color = Color.red;
         }
     }
+
+    
 }
 
