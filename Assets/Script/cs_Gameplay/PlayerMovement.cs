@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         move = Input.GetAxis("Horizontal");
-        rb2d.velocity = new Vector2(move * Speed, rb2d.velocity.y);
+        rb2d.linearVelocity = new Vector2(move * Speed, rb2d.linearVelocity.y);
 
         // Flip the sprite
         if (move > 0 && !facingRight)
