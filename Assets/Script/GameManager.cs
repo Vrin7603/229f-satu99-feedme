@@ -1,9 +1,14 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public int score = 0;
     public int playerHP = 3;
+    public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI hpText;
 
     public static GameManager Instance;
 
@@ -28,6 +33,18 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("Player is defeated!");
             // Add game over logic here*************Add scene******
+        }
+    }
+    void Update()
+    {
+        if (GameManager.Instance != null)
+        {
+            scoreText.text = "Score: " + GameManager.Instance.score;
+            hpText.text = "HP: " + GameManager.Instance.playerHP;
+
+            // Set text colors
+            scoreText.color = Color.yellow;
+            hpText.color = Color.red;
         }
     }
 }
