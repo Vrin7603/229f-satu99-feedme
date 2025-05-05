@@ -5,12 +5,7 @@ public class ShootBullet : MonoBehaviour
     [SerializeField] Transform shootPoint;
     [SerializeField] GameObject target;
     [SerializeField] Rigidbody2D bulletPrefab;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
